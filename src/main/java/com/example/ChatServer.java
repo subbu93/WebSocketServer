@@ -1,4 +1,4 @@
-package com.exanple;
+package com.example;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
