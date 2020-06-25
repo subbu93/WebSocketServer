@@ -1,13 +1,29 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="MavenWebSocketServer:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/MavenWebSocketServer_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/MavenWebSocketServer-1.0</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>MavenWebSocketServer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
-      <element id="javaee-facet-resources" facet="MavenWebSocketServer/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="MavenWebSocketServer" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.websocket:javax.websocket-api:1.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.4" />
+        </element>
       </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/MavenWebSocketServer-1.0/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="MavenWebSocketServer/web/Web" />
     </root>
   </artifact>
 </component>
