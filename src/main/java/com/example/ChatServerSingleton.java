@@ -1,15 +1,18 @@
 package com.example;
 
+import javax.websocket.Session;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ChatServerSingleton {
     private static ChatServerSingleton instance = null;
 
-    Map<String, String> userNames;
+    Map<String, String> userSessionIdMap;
+    Map<String, Session> sessionIdSessionMap;
 
     private ChatServerSingleton() {
-        userNames = new HashMap<String, String>();
+        userSessionIdMap = new HashMap<>();
+        sessionIdSessionMap = new HashMap<>();
     }
 
     public static ChatServerSingleton getInstance() {
